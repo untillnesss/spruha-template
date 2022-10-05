@@ -1,0 +1,76 @@
+Spruha Admin Template
+
+Version V.6 - Updates  17-March-2021  
+--------------------------------------------------------------------------------------------------------
+
+Updates :  
+
+1) Fixed Ui issues
+
+2) Newly Added Features in Form-Elements
+
+--------------------------------------------------------------------------------------------------------
+
+Note:-If you are using scss files then please  run gulp  commands  as directed in documentation.if you need to know more about gulp go through gulp tutorials.
+
+
+
+////////////////////
+1) Fixed Ui issues
+////////////////////
+
+please replace below mentioned folders and files for fixed ui issues for both LTR (root:-{assets/css/})and RTL (root:-{assets/css-rtl/})
+
+FOLDERS :- colors and sidemenu
+FILES:- dark-style.css,dark-style.scss ,sidemenu-responsive.css,sidemenu-responsive.scss,skins.css,skins.scss
+
+For scss users please follow above mentioned note .
+
+
+////////////////////////////////////////
+2) Newly Added Features in Form-Elements
+////////////////////////////////////////
+
+The newly added features are DATE AND TIME PICKER ,DATE, MONTH, YEAR RANGE PICKER will applicable for both LTR and RTL.
+
+
+step-1: please replace htmlpage of form-elements.html  according to your required version .
+
+step-2 please add amazeui-datetimepicker and bootstrap-datepicker in your plugins folder (root:-{assets/plugins/}).
+
+step-3 please add below mentioned js in form-elements.js i.e, in your js folder (root:-{assets/js/}).
+
+
+ADDED js:-
+
+	//Date picker
+	$('#datepicker-date').bootstrapdatepicker({
+		format: "dd-mm-yyyy",
+		viewMode: "date",
+		multidate: true,
+		multidateSeparator: "-",
+	})
+	
+	//Month picker
+	$('#datepicker-month').bootstrapdatepicker({
+		format: "MM",
+		viewMode: "months",
+		minViewMode: "months",
+		multidate: true,
+		multidateSeparator: "-",
+	})
+	
+	//Year picker
+	$('#datepicker-year').bootstrapdatepicker({
+		format: "yyyy",
+		viewMode: "year",
+		minViewMode: "years",
+		multidate: true,
+		multidateSeparator: "-",
+	})
+// AmazeUI Datetimepicker
+	$('#datetimepicker').datetimepicker({
+		format: 'yyyy-mm-dd hh:ii:ss',
+		autoclose: true
+	});
+	
